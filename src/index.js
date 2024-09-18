@@ -26,4 +26,4 @@ app.post("/api/otp", async (req, res) => {
   }
 });
 
-function validateOtp(otp, res) {}
+export default app;
