@@ -1,7 +1,13 @@
 import express from "express";
 const app = express();
 import dotenv from "dotenv";
+import cors from "cors";
 dotenv.config();
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(express.json());
 app.listen(process.env.PORT || 8000, () => {
   console.log(`Server is running at port: ${process.env.PORT}`);
